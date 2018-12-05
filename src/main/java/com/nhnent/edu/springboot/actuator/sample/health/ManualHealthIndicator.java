@@ -6,9 +6,9 @@ import org.springframework.stereotype.Component;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
- * 메모리 내 객체로 구분되는 헬스 인디케이터
- * <p>기본은 UP 상태</p>
- *
+ * 메모리 내 객체로 구분되는 헬스 인디케이터 <p>기본은 UP 상태</p>
+ * メモリ内のオブジェクトに区分されているヘルスインジケーター <p>基本はUP状態</p>
+ * 
  * @author myeongju.jung
  */
 @Component
