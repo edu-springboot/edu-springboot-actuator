@@ -1,4 +1,4 @@
-package com.example.actuator.sample;
+package com.nhnent.edu.springboot.actuator.sample;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

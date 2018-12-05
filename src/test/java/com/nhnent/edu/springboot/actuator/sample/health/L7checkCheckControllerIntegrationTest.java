@@ -1,4 +1,4 @@
-package com.example.actuator.sample.health;
+package com.nhnent.edu.springboot.actuator.sample.health;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -32,14 +32,18 @@ public class L7checkCheckControllerIntegrationTest {
         expectUrlStatus(HEALTH, HttpStatus.OK);
 
         // down
-        restTemplate.delete(L7CHECK);
+        restTemplate
+        .withBasicAuth("user", "user")
+        .delete(L7CHECK);
         // then down
         TimeUnit.MILLISECONDS.sleep(1000);
         expectUrlStatus(L7CHECK, HttpStatus.SERVICE_UNAVAILABLE);
         expectUrlStatus(HEALTH, HttpStatus.SERVICE_UNAVAILABLE);
 
         // up
-        restTemplate.postForEntity(L7CHECK, null, Object.class);
+        restTemplate
+        .withBasicAuth("user", "user")
+        .postForEntity(L7CHECK, null, Object.class);
         // then up
         TimeUnit.MILLISECONDS.sleep(1000);
         expectUrlStatus(L7CHECK, HttpStatus.OK);
@@ -47,7 +51,9 @@ public class L7checkCheckControllerIntegrationTest {
     }
 
     private void expectUrlStatus(String url, HttpStatus status) {
-        ResponseEntity<Object> res = restTemplate.getForEntity(url, Object.class);
+        ResponseEntity<Object> res = restTemplate
+        		.withBasicAuth("user", "user")
+        		.getForEntity(url, Object.class);
         assertThat(res.getStatusCode(), is(status));
     }
 }
