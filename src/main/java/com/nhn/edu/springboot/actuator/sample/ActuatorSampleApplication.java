@@ -1,4 +1,4 @@
-package com.nhnent.edu.springboot.actuator.sample;
+package com.nhn.edu.springboot.actuator.sample;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

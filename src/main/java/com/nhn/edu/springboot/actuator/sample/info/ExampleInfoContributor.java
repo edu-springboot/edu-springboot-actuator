@@ -1,4 +1,4 @@
-package com.nhnent.edu.springboot.actuator.sample.info;
+package com.nhn.edu.springboot.actuator.sample.info;
 
 import org.springframework.boot.actuate.info.Info;
 import org.springframework.boot.actuate.info.InfoContributor;

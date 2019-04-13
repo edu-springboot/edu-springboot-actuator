@@ -1,4 +1,4 @@
-package com.nhnent.edu.springboot.actuator.sample.health;
+package com.nhn.edu.springboot.actuator.sample.health;
 
 import org.springframework.boot.actuate.health.Health;
 import org.springframework.stereotype.Component;
@@ -12,7 +12,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * @author myeongju.jung
  */
 @Component
-public class ManualHealthIndicator implements ChangableHealthIndicator {
+public class ManualHealthIndicator implements ChangeableHealthIndicator {
     private final AtomicReference<Health> healthRef = new AtomicReference<>(Health.up().build());
 
     @Override

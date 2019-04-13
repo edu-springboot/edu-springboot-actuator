@@ -1,4 +1,4 @@
-package com.nhnent.edu.springboot.actuator.sample.health;
+package com.nhn.edu.springboot.actuator.sample.health;
 
 import org.springframework.boot.actuate.health.Health;
 import org.springframework.boot.actuate.health.Status;
@@ -22,9 +22,9 @@ import java.util.Set;
 @RequestMapping("${l7check.uri:/l7check}")
 public class L7checkCheckController {
     private static final Set<String> LOCAL_IPS = Collections.unmodifiableSet(new HashSet<>(Arrays.asList("0:0:0:0:0:0:0:1", "127.0.0.1")));
-    private final ChangableHealthIndicator indicator;
+    private final ChangeableHealthIndicator indicator;
 
-    public L7checkCheckController(ChangableHealthIndicator indicator) {
+    public L7checkCheckController(ChangeableHealthIndicator indicator) {
         this.indicator = indicator;
     }
 

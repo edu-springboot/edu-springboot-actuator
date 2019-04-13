@@ -1,6 +1,5 @@
-package com.nhnent.edu.springboot.actuator.sample;
+package com.nhn.edu.springboot.actuator.sample.counter;
 
-import org.springframework.boot.actuate.endpoint.annotation.WriteOperation;
 import org.springframework.boot.actuate.endpoint.web.WebEndpointResponse;
 import org.springframework.lang.Nullable;
 
@@ -16,7 +15,7 @@ public class CounterWebEndPoint {
         this.target = target;
     }
 
-    @WriteOperation
+    //@WriteOperation
     public WebEndpointResponse<Long> increment(@Nullable Long delta) {
         return new WebEndpointResponse<>(target.increment(delta));
     }

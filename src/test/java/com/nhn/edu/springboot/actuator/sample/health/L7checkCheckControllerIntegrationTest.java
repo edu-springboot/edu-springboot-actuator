@@ -1,4 +1,4 @@
-package com.nhnent.edu.springboot.actuator.sample.health;
+package com.nhn.edu.springboot.actuator.sample.health;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -21,7 +21,7 @@ import static org.junit.Assert.*;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class L7checkCheckControllerIntegrationTest {
     private static final String L7CHECK = "/l7check";
-    private static final String HEALTH = "/health";
+    private static final String HEALTH = "/actuator/health";
     @Autowired
     TestRestTemplate restTemplate;
 
